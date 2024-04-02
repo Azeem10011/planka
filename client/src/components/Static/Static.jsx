@@ -6,6 +6,7 @@ import { Icon, Loader } from 'semantic-ui-react';
 
 import ProjectsContainer from '../../containers/ProjectsContainer';
 import BoardContainer from '../../containers/BoardContainer';
+import BoardsContainer from '../../containers/BoardsContainer';
 
 import styles from './Static.module.scss';
 
@@ -90,6 +91,7 @@ function Static({ projectId, cardId, board }) {
 
   return (
     <div className={classNames(styles.wrapper, styles.wrapperFlex, styles.wrapperBoard)}>
+      <BoardsContainer />
       <BoardContainer />
     </div>
   );

@@ -104,7 +104,7 @@ const Boards = React.memo(({ items, currentId, canEdit, onCreate, onUpdate, onMo
     <div className={styles.wrapper} onWheel={handleWheel}>
       <div ref={tabsWrapper} className={styles.tabsWrapper}>
         <DragDropContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-          <Droppable droppableId="boards" type={DroppableTypes.BOARD} direction="horizontal">
+          <Droppable droppableId="boards" type={DroppableTypes.BOARD} direction="vertical">
             {({ innerRef, droppableProps, placeholder }) => (
               // eslint-disable-next-line react/jsx-props-no-spreading
               <div {...droppableProps} ref={innerRef} className={styles.tabs}>

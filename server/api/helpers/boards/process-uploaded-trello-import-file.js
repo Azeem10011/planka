@@ -15,7 +15,9 @@ module.exports = {
 
   async fn(inputs) {
     const content = await fs.readFile(inputs.file.fd);
+    sails.log(content)
     const trelloBoard = JSON.parse(content);
+    sails.log(trelloBoard)
 
     if (
       !trelloBoard ||

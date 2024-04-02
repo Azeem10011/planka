@@ -68,13 +68,15 @@
   }
 
   .tabWrapper {
-    display: flex;
+    // display: flex;
     flex: 0 0 auto;
   }
 
   .tabs {
     display: flex;
-    height: 38px;
+    flex-direction: column;
+    // height: 38px;
+    width: 250px;
     flex: 0 0 auto;
     white-space: nowrap;
   }
@@ -82,14 +84,14 @@
   .tabsWrapper {
     display: flex;
     flex: 0 0 auto;
-    height: 56px;
+    // height: 56px;
     overflow-x: auto;
     overflow-y: hidden;
     scrollbar-width: thin;
 
-    &:hover {
-      height: 38px;
-    }
+    // &:hover {
+    //   height: 38px;
+    // }
 
     &::-webkit-scrollbar {
       height: 5px;
@@ -105,11 +107,13 @@
   }
 
   .wrapper {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
     display: flex;
-    flex: 1 1 auto;
     flex-direction: column;
     height: 38px;
-    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(34, 36, 38, 1);
+    height: 100%;
+    width: 250px;
   }
 }
