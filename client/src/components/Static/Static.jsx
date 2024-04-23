@@ -91,7 +91,7 @@ function Static({ projectId, cardId, board }) {
 
   return (
     <div className={classNames(styles.wrapper, styles.wrapperFlex, styles.wrapperBoard)}>
-      <BoardsContainer />
+      {/* <BoardsContainer /> */}
       <BoardContainer />
     </div>
   );

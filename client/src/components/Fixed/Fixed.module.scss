@@ -1,7 +1,14 @@
 :global(#app) {
   .wrapper {
     position: fixed;
+    overflow: auto; /* or overflow: scroll; */
     width: 100%;
     z-index: 1;
+    padding-left: 250px;
+  }
+  .headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

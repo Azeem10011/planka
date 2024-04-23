@@ -106,13 +106,18 @@ const Boards = React.memo(({ items, currentId, canEdit, onCreate, onUpdate, onMo
         <DragDropContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
           <Droppable droppableId="boards" type={DroppableTypes.BOARD} direction="vertical">
             {({ innerRef, droppableProps, placeholder }) => (
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              <div {...droppableProps} ref={innerRef} className={styles.tabs}>
-                {itemsNode}
-                {placeholder}
+              <div className={styles.wrapperTabs}>
+                {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+                <div {...droppableProps} ref={innerRef} className={styles.tabs}>
+                  {itemsNode}
+                  {placeholder}
+                </div>
                 {canEdit && (
                   <AddPopup onCreate={onCreate}>
-                    <Button icon="plus" className={styles.addButton} />
+                    <div className={styles.addProject}>
+                      <p className={styles.addProjectText}>Add Project</p>
+                      <Button icon="plus" className={styles.addButton} />
+                    </div>
                   </AddPopup>
                 )}
               </div>
