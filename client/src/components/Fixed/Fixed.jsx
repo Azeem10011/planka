@@ -10,13 +10,21 @@ import styles from './Fixed.module.scss';
 
 function Fixed({ projectId, board }) {
   return (
-    <div className={styles.headerWrapper}>
-      <BoardsContainer />
-      <div className={styles.wrapper}>
-        <HeaderContainer />
-        {projectId && <ProjectContainer />}
-        {board && !board.isFetching && <BoardActionsContainer />}
-      </div>
+    <div>
+      {board && !board.isFetching ? (
+        <div className={styles.headerWrapper}>
+          <BoardsContainer />
+          <div className={styles.wrapper}>
+            <HeaderContainer />
+            <BoardActionsContainer />
+          </div>
+        </div>
+      ) : (
+        <div className={styles.wrapperFull}>
+          <HeaderContainer />
+          {projectId && <ProjectContainer />}
+        </div>
+      )}
     </div>
   );
 }

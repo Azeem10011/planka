@@ -6,6 +6,12 @@
     z-index: 1;
     padding-left: 250px;
   }
+  .wrapperFull {
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    z-index: 1;
+  }
   .headerWrapper {
     display: flex;
     flex-direction: row;
